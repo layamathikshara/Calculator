@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  Calculator
+</title>
+
+<!-- This is the small icon near the title -->
+<link rel = "icon" href ="Picture1.png" type = "image/x-icon">
+
+<style>
+.button {
+  background-color:rgba(255, 255, 255,0.2); 
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+  margin-right: 5px;
+  margin-bottom: 7px;
+  width: 60px;
+  font-family: Arial;
+  
+}
+
+.button2:hover {
+  background-color:rgb(104, 15, 231);
+  color: white;
+}
+
+.textbox{
+  margin-left:500px;
+  margin-top:100px ;
+  height: 30px; 
+  width:265px; 
+  background-color: rgba(36, 28, 56,1); 
+  border:rgba(36, 28, 56,1); 
+  font-size:40px ;
+  color: white; 
+  text-align: right;
+  font-family: Arial;
+}
+
+</style>
+</head>
+
+<!-- Set a background colour -->
+<body style="background-color:rgba(36, 28, 56,1);">
+
+<!-- This is a form -->
+<form name="calculator" >
+
+  <!-- This the textbox -->
+  <input type="textfield" class="textbox" name="ans" value=""><br>
+  
+  <!-- This is the first row in our calculator it has Ac, decimal and division functions-->
+  <input type="reset"  class="button button2" :hover style="margin-left:500px; margin-top: 10px; width: 128px;" value="Ac">
+  <input type="button" class="button button2" :hover value="." onClick="document.calculator.ans.value+='.'">
+  <input type="button" class="button button2" :hover value="/" onClick="document.calculator.ans.value+='/'"><br>
+
+  <!-- This is the second row in our calculator it has the numbers 1,2,3 and the multiplication function-->
+  <input type="button" class="button button2" :hover value="1" style="margin-left:500px;" onClick="document.calculator.ans.value+='1'">
+  <input type="button" class="button button2" :hover value="2" onClick="document.calculator.ans.value+='2'">
+  <input type="button" class="button button2" :hover value="3" onClick="document.calculator.ans.value+='3'">
+  <input type="button" class="button button2" :hover value="x" onClick="document.calculator.ans.value+='*'"><br>
+  
+  <!-- This is the third row in our calculator it has the numbers 4,5,6 and the subtraction function-->
+  <input type="button" class="button button2" :hover value="4" style="margin-left:500px;" onClick="document.calculator.ans.value+='4'">
+  <input type="button" class="button button2" :hover value="5" onClick="document.calculator.ans.value+='5'">
+  <input type="button" class="button button2" :hover value="6" onClick="document.calculator.ans.value+='6'">
+  <input type="button" class="button button2" :hover value="-" onClick="document.calculator.ans.value+='-'"><br>
+
+  <!-- This is the fourth row in our calculator it has the numbers 7,8,9 and the addition function -->
+  <input type="button" class="button button2" :hover value="7" style="margin-left:500px;" onClick="document.calculator.ans.value+='7'">
+  <input type="button" class="button button2" :hover value="8" onClick="document.calculator.ans.value+='8'">
+  <input type="button" class="button button2" :hover value="9" onClick="document.calculator.ans.value+='9'">
+  <input type="button" class="button button2" :hover value="+" onClick="document.calculator.ans.value+='+'"><br>
+ 
+  <!-- This is the last row in our calculator it has the numbers 0,00 and the equaltoo function-->
+  <input type="button" class="button button2" :hover style="margin-left:500px;" value="0" onClick="document.calculator.ans.value+='0'">
+  <input type="button" class="button button2" :hover value="00" onClick="document.calculator.ans.value+='00'">
+  <input type="button" class="button button2" :hover value="=" style="width: 129px;"onClick="document.calculator.ans.value=eval(document.calculator.ans.value)"><br>
+  
+  <img src="Picture1.png" style="width: 75px;float: right;">
+
+  </form>
+
+</body>
+</html>
